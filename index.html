@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <title>Digital Clock</title>
+  </head>
+  <body>
+
+    <div class="">
+      <select id="list" class="" name="" onchange="showTime(); drawClock()">
+        <option value="lebanon">Lebanon</option>;
+        <option value="paris">Paris</option>;
+        <option value="luanda">Luanda</option>;
+        <option value="london">London</option>;
+        <option value="egypt">Egypt</option>;
+      </select>
+      <button onclick="click1()" class="sub-country">Copy Text</button>
+      <p id="wday"></p>
+      <br>
+      <p id="hours"></p>
+    </div>
+    <canvas id="canvas" width="400" height="400"
+style="background-color:#333">
+</canvas>
+
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
