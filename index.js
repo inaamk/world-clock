@@ -176,3 +176,14 @@ function drawHand(ctx, pos, length, width) {
     ctx.stroke();
     ctx.rotate(-pos);
 }
+function myFunction() {
+  var x = document.getElementById("canvas");
+  var y=document.getElementById("page");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+    y.style.display="block";
+  } else {
+    x.style.display = "block";
+    y.style.display="none";
+  }
+}
