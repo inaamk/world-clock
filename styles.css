@@ -1,17 +1,27 @@
 body{
-  min-height: 100vh;
+  border: 5px ridge #32cd32;
+  margin: 10%;
+}
+
+.listBut select, .listBut button{
+  font-size: 2rem;
+}
+.listBut{
+  padding: 2%;
+}
+p{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #32cd32;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000;
-}
-
-p{
-  font-family: 'Orbitron', sans-serif;
-  font-size: 5rem;
-  color: #32cd32;
 
 }
 canvas{
   display:none;
+  width:400;
+  height:400;
+  margin-left: 40%;
+  margin-bottom: 2%;
 }
