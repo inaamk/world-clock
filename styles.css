@@ -12,3 +12,6 @@ p{
   color: #32cd32;
 
 }
+canvas{
+  display:none;
+}
