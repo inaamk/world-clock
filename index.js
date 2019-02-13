@@ -179,11 +179,14 @@ function drawHand(ctx, pos, length, width) {
 function myFunction() {
   var x = document.getElementById("canvas");
   var y=document.getElementById("page");
+  var q=document.getElementById("anDig")
   if (x.style.display === "block") {
     x.style.display = "none";
     y.style.display="block";
+    q.innerHTML="Analog";
   } else {
     x.style.display = "block";
     y.style.display="none";
+    q.innerHTML="Digital";
   }
 }
