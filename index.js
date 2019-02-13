@@ -1,7 +1,8 @@
 function showTime(){
-  let arr=["paris","london"];
-  let arr2=["lebanon", "egypt"];
-  let arr3=["luanda"];
+  let arr=["Paris","Strasbourg","Marseille","Montpellier","Toulouse","Lyon"];
+  let arr2=["Beirut", "Nabatîyé et Tahta","Bcharré","Tripoli","Baabda"];
+  let arr3=["Luanda","N’dalatando","Huambo","Lobito","Benguela","Cuito","Lubango","Malanje"];
+  let arr4=["Sydney","Canberra","Maitland","Liverpool","Blacktown"];
   var country = document.getElementById("list").value;
   var b;
   var d = new Date();
@@ -10,20 +11,16 @@ function showTime(){
   }else if(arr2.includes(country)){
     b=new Date(d.toLocaleString("en-US", {timeZone: "Asia/Beirut"}));
   }else if(arr3.includes(country)){
-    b=new Date(d.toLocaleString("en-US", {timeZone: "America/Los_Angeles"}));
+    b=new Date(d.toLocaleString("en-US", {timeZone: "Africa/Luanda"}));
+  }else if(arr4.includes(country)){
+    b=new Date(d.toLocaleString("en-US", {timeZone: "Australia/Sydney"}));
   }
-  //var b = new Date(d.toLocaleString("en-US", {timeZone: "Europe/Paris"}));
   var nhar = b.getUTCDate();
   var seneh = b.getUTCFullYear();
   var chaher = b.getUTCMonth()+1;
   var day;
-  //var n = b.getTimezoneOffset();
   var a = -(b.getTimezoneOffset()/60);
-  //var se3a = b.getUTCHours()+a;
-  //var min = b.getUTCMinutes();
-  //var sec = b.getUTCSeconds();
   let formatHours= convertFormat(b.getUTCHours()+a);
-  //hours=checkTime(b.getUTCHours()+a);
   hours =addZero(checkTime(b.getUTCHours()+a));
   minutes =addZero(b.getUTCMinutes());
   seconds =addZero(b.getUTCSeconds());
@@ -50,8 +47,8 @@ switch (new Date().getUTCDay()) {
     day = "Saturday";
 }
 
-document.getElementById("wday").innerHTML = "Today is " + day +" "+ nhar + " "+ chaher + " "+ seneh;
-document.getElementById("hours").innerHTML= hours + " "+ minutes +" "+seconds +" "+ formatHours;
+document.getElementById("wday").innerHTML = day +" : "+ nhar + " / "+ chaher + " / "+ seneh;
+document.getElementById("hours").innerHTML= hours + " : "+ minutes +" : "+seconds +" "+ formatHours;
 }
 
 function convertFormat(time){
@@ -131,27 +128,27 @@ function drawNumbers(ctx, radius) {
 }
 
 function drawTime(ctx, radius){
-  let arr=["paris","london"];
-  let arr2=["lebanon", "egypt"];
-  let arr3=["luanda"];
-  var country = document.getElementById("list").value;
-  var b;
-  var d = new Date();
-  if(arr.includes(country)){
-      b=new Date(d.toLocaleString("en-US", {timeZone: "Europe/Paris"}));
-  }else if(arr2.includes(country)){
-    b=new Date(d.toLocaleString("en-US", {timeZone: "Asia/Beirut"}));
-  }else if(arr3.includes(country)){
-    b=new Date(d.toLocaleString("en-US", {timeZone: "America/Los_Angeles"}));
-  }
-  var d = new Date();
-  //var b = new Date(d.toLocaleString("en-US", {timeZone: "Europe/Paris"}));
-  var day;
-  var a = -(b.getTimezoneOffset()/60);
-  let formatHours= convertFormat(b.getUTCHours()+a);
-  hours =addZero(checkTime(b.getUTCHours()+a));
-  minutes =addZero(b.getUTCMinutes());
-  seconds =addZero(b.getUTCSeconds());
+  // let arr=["Paris","Strasbourg","Marseille","Montpellier","Toulouse","Lyon"];
+  // let arr2=["Beirut", "Nabatîyé et Tahta","Bcharré","Tripoli","Baabda"];
+  // let arr3=["Luanda","N’dalatando","Huambo","Lobito","Benguela","Cuito","Lubango","Malanje"];
+  // var country = document.getElementById("list").value;
+  // var b;
+  // var d = new Date();
+  // if(arr.includes(country)){
+  //     b=new Date(d.toLocaleString("en-US", {timeZone: "Europe/Paris"}));
+  // }else if(arr2.includes(country)){
+  //   b=new Date(d.toLocaleString("en-US", {timeZone: "Asia/Beirut"}));
+  // }else if(arr3.includes(country)){
+  //   b=new Date(d.toLocaleString("en-US", {timeZone: "Africa/Luanda"}));
+  // }
+  // var d = new Date();
+  // var day;
+  // var a = -(b.getTimezoneOffset()/60);
+  // let formatHours= convertFormat(b.getUTCHours()+a);
+  // hours =addZero(checkTime(b.getUTCHours()+a));
+  // minutes =addZero(b.getUTCMinutes());
+  // seconds =addZero(b.getUTCSeconds());
+  showTime();
     //hour
     hours=hours%12;
     hours=(hours*Math.PI/6)+
@@ -178,8 +175,8 @@ function drawHand(ctx, pos, length, width) {
 }
 function myFunction() {
   var x = document.getElementById("canvas");
-  var y=document.getElementById("page");
-  var q=document.getElementById("anDig")
+  var y=document.getElementById("clock");
+  var q=document.getElementById("anDig");
   if (x.style.display === "block") {
     x.style.display = "none";
     y.style.display="block";
