@@ -7,16 +7,15 @@
     <title>Digital Clock</title>
   </head>
   <body>
-
-    <div class="">
-      <select id="list" class="" name="" onchange="showTime(); drawClock()">
-        <option value="lebanon">Lebanon</option>;
-        <option value="paris">Paris</option>;
-        <option value="luanda">Luanda</option>;
-        <option value="london">London</option>;
-        <option value="egypt">Egypt</option>;
-      </select>
-      <button onclick="click1()" class="sub-country">Copy Text</button>
+    <select id="list" class="" name="" onchange="showTime()">
+      <option value="lebanon">Lebanon</option>;
+      <option value="paris">Paris</option>;
+      <option value="luanda">Luanda</option>;
+      <option value="london">London</option>;
+      <option value="egypt">Egypt</option>;
+    </select>
+    <button onclick="myFunction()" class="sub-country">Analog</button>
+    <div id="page">
       <p id="wday"></p>
       <br>
       <p id="hours"></p>
