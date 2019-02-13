@@ -4,25 +4,48 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-    <title>Digital Clock</title>
+    <title>World Clock</title>
   </head>
   <body>
-    <select id="list" class="" name="" onchange="showTime()">
-      <option value="lebanon">Lebanon</option>;
-      <option value="paris">Paris</option>;
-      <option value="luanda">Luanda</option>;
-      <option value="london">London</option>;
-      <option value="egypt">Egypt</option>;
-    </select>
-    <button id="anDig" onclick="myFunction()" class="sub-country">Analog</button>
-    <div id="page">
-      <p id="wday"></p>
+    <div class="listBut">
+      <select id="list" class="" name="" onchange="showTime()">
+        <!-- <option value="">Select City</option> -->
+        <option value="Beirut">Beirut</option>;
+        <option value="Maitland">Maitland</option>;
+        <option value="Paris">Paris</option>;
+        <option value="Luanda">Luanda</option>;
+        <option value="Strasbourg">Strasbourg</option>;
+        <option value="Liverpool">Liverpool</option>;
+        <option value="Marseille">Marseille</option>;
+        <option value="Nabatîyé et Tahta">Nabatîyé et Tahta</option>;
+        <option value="Bcharré">Bcharré</option>;
+        <option value="N’dalatando">N’dalatando</option>;
+        <option value="Canberra">Canberra</option>;
+        <option value="Huambo">Huambo</option>;
+        <option value="Montpellier">Montpellier</option>;
+        <option value="Toulouse">Toulouse</option>;
+        <option value="Tripoli">Tripoli</option>;
+        <option value="Lobito">Lobito</option>;
+        <option value="Benguela">Benguela</option>;
+        <option value="Blacktown">Blacktown</option>;
+        <option value="Lyon">Lyon</option>;
+        <option value="Baabda">Baabda</option>;
+        <option value="Cuito">Cuito</option>;
+        <option value="Lubango">Lubango</option>;
+        <option value="Malanje">Malanje</option>;
+        <option value="Sydney">Sydney</option>;
+      </select>
+      <button id="anDig" onclick="myFunction()" class="sub-country">Analog</button>
+    </div>
+    <p id="wday"></p>
+    <div id="clock">
+      <!-- <p id="wday"></p> -->
       <br>
       <p id="hours"></p>
     </div>
-    <canvas id="canvas" width="400" height="400"
-style="background-color:#333">
-</canvas>
+    <canvas id="canvas" >
+
+    </canvas>
 
     <script src="index.js" charset="utf-8"></script>
   </body>
